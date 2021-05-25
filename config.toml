@@ -1,8 +1,8 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL = 'https://airdb.dev/hugo-book'
+baseURL = 'https://kangkang17.cn'
 title = 'airdb wiki'
-theme = 'hugo-book'
+theme = 'book'
 
 # Book configuration
 disablePathToLower = true
