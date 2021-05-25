@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 32" width="140" height="32">
+	<defs>
+		<image width="32" height="32" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IB2cksfwAAAg1QTFRF/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/21q/29s/3Fv/3Fu/3Nw/2Zi/15b/1tX/25r/3Fu/2to/2lm/9jX/87N/5GP/1tY/3Jw/3Jv/3Fu/1RQ/6el/////9XU/4J//1VS/2xp/1xZ/9/e/56b/3Bt/3Fu/1dU/62r/6mo/3t4/8nI/5aU/1ZS/3Nx/2Ng/97d/zs3/1FN/5KQ//7+/2Nf/1NP/6ak/4qI/1dT/01J/8C//1VR/2Rg//Dv/05L/8TC//j4/2hl/1JO/6Si/4mG/11a/4B9/5OR/+/u/9bV/1ZT/2hk//Ly/6Oh/1lV/4uI//Py/2Vi//Dw/9TU/97e/9fW/0A7/4F+/6al/21p/5CO/3Rx/7Gv//f2/2ll/2Rh/+/v/05K/+7u/768/1RR/1JP/6em//79/3p3/1FO/0ZC/4yJ//r6/2xo//Hx/9PS/2Fe/3Z0/3Zz//Hw//f3/5uZ/9LQ/398/6im//Pz/+Hg/0hE/2Bc/2Zj/3d0/3l2/3l3/3Vy/2dk/5WT/5OQ/3Fu/6il/4aE/1BM/1hU/7Cv/4WD/1pW/3Fu/9DP/3Ft/2pn/2Jf/+Xl/3Fu/1pX/6Wk/11Z/5qY/42L/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3Fu/3FuHICnhAAAAK90Uk5TAGOmzuPt8fLsYjXX/9YtAeb///9f//////+w///////////S///////////////v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////n/////////9P//////7L//////2QDND7g3wZu1OXuba9EWrwAAAImSURBVHicY2AAAkYmZhZWNnYkwMbBwszEyQABXNw8OAAvF0ieD5c0CPAxMPALoIkJCgkjOAL8DCKo0qKCYuISkqJwvgiDFKoCaRlZOXlxBUUlKF+KQRlFXklFVU1NTV1DUwiqQpkB1Qla2jpqIKCrogd1BIM+igsMDI2MTUAqTM3MwSL6DOzICmQs1CytrG2ACmz17MCWsKMoELV3UFNzdHI2BapwceXBVCDj5q6mJusk6eGppubF442hQNTHF2S9n4R/AJAK1MZQIOMWBFIQHBKqF6amFh6BrkDURxXsRbVIa54obApkomPU1GLj1NTiExKBymzQrRD1SQIKJ6cAidQ0NbV0oQw0BTKZWUD7sy2AxuR4qanl5qF5UzS/QE2tsKi4pNQW5I6y8ky0gJLJrFBTq6yqrjEtAymwMUtFNUE0HxiIamG1dRCP1OdB9cEVyGTWqsFBQ6OrnhJMARvUC00gi+u8vJpbXOStW8XbeCAq2KDRndEODLvg6I7Oru6eCLPS3r7SHogJ+gz9EAMmAA2YOKldTKxHS2/yFCBn6jRwwuxnmA6ieoSAfpuhMhOia9ZsoHvm+AuC2NMZ5oKoefPLKnISF0AdJhqysKLCa1EbiD2XYTGIEjJOTVWSQSR2b1HzmiJJEGsxwxIOkB6t0FBvHlhS51ES8vYOBWcOjiUMDEt58ICloMy5bDku6RXLINl75Sqp1WvWomb/tWtWS61bCZQEAN6bjaVfrWalAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.txt0 { font-size: 9px;fill: #2628e9;font-weight: 400;font-family: "AlibabaPuHuiTi-Regular", "Alibaba PuHuiTi" } 
+		.txt1 { font-size: 11px;fill: #2628e9;font-weight: 700;font-family: "AlibabaPuHuiTi-Bold", "Alibaba PuHuiTi" } 
+	</style>
+	<text id="Better Tech Better Life   " style="transform: matrix(1,0,0,1,39.223,28.861)" >
+		<tspan x="0" y="0" class="txt0">Better Tech Better Life</tspan>
+	</text>
+	<text id="https://airdb.dev " style="transform: matrix(1,0,0,1,39,15)" >
+		<tspan x="0" y="0" class="txt1">https://airdb.dev</tspan>
+	</text>
+	<use id="图层 3" href="#img1" x="3" y="0" />
+</svg>
