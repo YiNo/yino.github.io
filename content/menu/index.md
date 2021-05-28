@@ -8,10 +8,20 @@ headless: false
   - [垃圾回收]({{< relref "/wiki/go/垃圾回收.md" >}})
   - [Go并发原理及GPM调度策略]({{< relref "/wiki/go/Go并发原理及GPM调度策略.md" >}})
 
-- [Python]({{< relref "/wiki/python/" >}})
-
+- [Python]({{< relref "/wiki/Python/" >}})
+  - [selenium]({{< relref "/wiki/Python/selenium.md" >}})
+  - [uswgi与nginx]({{< relref "/wiki/Python/uswgi与nginx.md" >}})
+  - [数据集]({{< relref "/wiki/Python/数据集.md" >}})
+  - [COMMON函数]({{< relref "/wiki/Python/common-function.md" >}})
+  - [threading]({{< relref "/wiki/Python/threading.md" >}})
+  - [queue]({{< relref "/wiki/Python/queue.md" >}})
+  - [tf-idf 文本分类]({{< relref "/wiki/Python/tf-idf.md" >}})
+  
 - [PHP]({{< relref "/wiki/PHP/" >}})
-
+  - [fpm优化]({{< relref "/wiki/PHP/fpm优化.md" >}})
+  - [excel导出]({{< relref "/wiki/PHP/function/excel-export.md" >}})
+  - [对象与数组相互转换]({{< relref "/wiki/PHP/function/对象与数组相互转换.md" >}})
+  
 - [VUE]({{< relref "/wiki/VUE/" >}})
 
 <br />
@@ -30,3 +40,9 @@ headless: false
 - **Linux**
   
 - **docker**
+  
+- **微服务**
+- [consul]({{< relref "/wiki/微服务/consul.md" >}})
+
+- **领域驱动设计**
+- [consul]({{< relref "/wiki/微服务/consul.md" >}})
