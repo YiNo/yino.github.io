@@ -1,24 +1,28 @@
 ---
-headless: true
+headless: false
 ---
 
-- [**Example Site**]({{< relref "/wiki/" >}})
-<br />
-  
-- [Table of Contents]({{< relref "/wiki/example/table-of-contents" >}})
-  - [With ToC]({{< relref "/wiki/example/table-of-contents/with-toc" >}})
-  - [Without ToC]({{< relref "/wiki/example/table-of-contents/without-toc" >}})
-- [Collapsed]({{< relref "/wiki/example/collapsed" >}})
-  - [3rd]({{< relref "/wiki/example/collapsed/3rd-level" >}})
-    - [4th]({{< relref "/wiki/example/collapsed/3rd-level/4th-level" >}})
+- **语言**
+- [Golang]({{< relref "/wiki/go/index" >}})
+  - [go-laravel]({{< relref "/wiki/go/go-laravel.md" >}})
+  - [yTask]({{< relref "/wiki/go/y-task.md" >}})
+
+- [Python]({{< relref "/wiki/python/index.md" >}})
+
+- [PHP]({{< relref "/wiki/PHP/index.md" >}})
+
+- [VUE]({{< relref "/wiki/VUE/index.md" >}})
+
 <br />
 
-- **Shortcodes**
-- [Buttons]({{< relref "/wiki/shortcodes/buttons" >}})
-- [Columns]({{< relref "/wiki/shortcodes/columns" >}})
-- [Expand]({{< relref "/wiki/shortcodes/expand" >}})
-- [Hints]({{< relref "/wiki/shortcodes/hints" >}})
-- [Katex]({{< relref "/wiki/shortcodes/katex" >}})
-- [Mermaid]({{< relref "/wiki/shortcodes/mermaid" >}})
-- [Tabs]({{< relref "/wiki/shortcodes/tabs" >}})
-<br />
+- **数据库**
+- [MySql]({{< relref "/wiki/MySql/index.md" >}})
+- [Redis]({{< relref "/wiki/Redis/index.md" >}})
+- [Mango]({{< relref "/wiki/Mango/index.md" >}})
+  <br />
+- **WebServer**
+- [Nginx]({{< relref "/wiki/Nginx/index.md" >}})
+  <br />
+
+- **Linux**
+- **docker**
