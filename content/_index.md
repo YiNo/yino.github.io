@@ -2,54 +2,79 @@
 title: 简介
 type: docs
 ---
+   Hello，我是孙十七，这是我个人的一个博客及笔记，欢迎来看；会不定期的更新，谢谢。
 
-# Hugo Wiki
-
-{{< columns >}}
-## 简单
-
-Hugo 是由 Go 语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。
-hugo提供了通过主题构建网站的机制。hugo生态已经提供了300+的主题可以用。
-
-<--->
-
-## 易用
-
-
-主题类似一种前端框架，可以帮助我们快速建站。 此项目是基于 [Hugo-book](https://github.com/alex-shpak/hugo-book) 进行的二次开发，此 hugo 主题
-主要用户网站建设和文档建设。
-只需导入作为 hugo themes 即可生效, 使用非常简单。
-
-{{< /columns >}}
-
-## Quick Start
-
-```bash
-mkdir -p ${project}/themes
-cd ${project}
-
-git init
-git submodule add --force  https://github.com/airdb-wiki/hugo-book  themes/book
-
-cp -pr themes/book/exampleSite/ .
-
-git add  .
-git commit -a -m"first commit"
-
-hugo server --minify --theme book
+   项目经验：
+   壳牌润滑油（壳牌公司内部项目）
+```text
+    是一个直播电商项目给公司内部的代理商供货，曾单日6个小时创下业绩2亿
+    职责：开发
+    核心框架：laravel
+    数据库：redis+mysql mysql 主从 redis负责处理订单、人员权限等热数据 用于减少mysql压力
+    webserver: 5台nginx负载
+```
+NLP-QA [模型算法地址](https://github.com/sun17ya/nlp-tf-idf)
+```text
+自己研发的一个nlp平台主要做一下关于nlp方面的api网站，可以提升自己，同时将所有api开源能提供给更多的开发者
+    1). 前端采用vue（vue-admin）做展示层
+    2). 后端采用PHP（laravel+swoole），swoole用来给laravel进程提速。
+    3). 模型算法采用Python,已完成模型
+        A. 机器学习：TF-IDF 余弦求文本相似度（短文本、已实现）
+        B. 深度学习（优化版本）：KB-QA采用神经网络对文本进行提取实体识别，关系提取 生成三元组（subject，relation，object）通过tf进行神经网络训练方法提取（研发中）
+    4). 数据库采用Mysql+Redis redis用于存储一些热数据比如token用户身份令牌，用户配置等，以及采用发布订阅 来通过两个编程语言之间的任务调度。
+    5). 自己研发的一个nlp平台主要做一下关于nlp方面的api网站，可以提升自己，同时将所有api开源
+    
 ```
 
-## Makefile
+[Go-laravel](https://github.com/sun17ya/golang-laravel)
+```text
+模仿Laravel框架开发 可以让PHP开发快速上手GO开发
+```
 
-```bash
-.PHONY: test
+锦鑫智客服语机器人（微信公众号）
+```text
+此项目是智能客服系统，帮助企业等一系列线上服务行业咨询类问题回答，减少客服的成本与效率。
+责任描述：
+    此项目是本人一人搭建，含前端后端数据库等，业务数据库采用Mysql，框架采用Tp5.0，热数据采用Redis 存储;
+    核心关于智能问答Api 采用一个第三方的问答api，目前已对此有解决方案； 自己建立了一个初步的模型，采用python 语言，使用jieba对question进行分词，采用word2vec 将词转换为词向量，使用tf-idf模型 进行问题归类，筛选出匹配度最高的，当然此设计有一定的弊端，能完成80%的工作，但是核心还是基于词汇的，并不是基于句义，比如 “我爱我的爸爸妈妈”和“爸爸妈妈爱我” 他会理解为一个意思，此设计有待完善。
+    此项目主要是基于微信公众号、 H5 和 pc 微信公众号是依托微信第三方平台，来设计。
+微信公众号：比如一个公众号，只需要授权我们的平台（我们是第三方平台），通过 向公众号发送的内容 回调给我们的事件，来进行回复。
+H5：手机端的界面，可以嵌入进app，微博等一些第三方软件，主要还是打开网址。
+PC： 是通过加载我们的Js sdk；
+    此项目还有一个亮点是 人工客服，采用websocket 协议，进行消息的实时传递， 设计： user 代理到user服务器上， customer server 代理到客服服务器，中间通过消息订阅；在刚开始的时候其实一台server 就能满足，此设计是有横向扩展的能力，为以后的拓展做铺垫;
+    案例：高新区企业直通车（公众号） 等。
+```
 
-all: run
-run:
-        hugo server --minify --theme book
-sub:
-        git submodule update --init
-        git submodule update --remote
-build:
-        hugo -D --minify
+袋鼠圈体制宝（小程序）
+```text
+项目负责人，负责数据库架构，项目架构，Api(RestFul),小程序，由于数据实时更新过快，所以迭代了3个版本，一期 5000个设备，每秒钟上报一次数据（gps,lbs,temperature,altitude....）
+    服务端架构：
+        第一版本：
+            thinkphp5.0(api框架)+MySQL(业务数据库)+swoole(udp 协议与硬件通信)；因为数据量大，插入频繁，导致MySQL宕机。
+        第二版本：
+            Thinkphp5.0(api框架)+MySQL(业务数据库)+redis(用于读取实时信息)
+Python Socket+pyredis(采用于redis队列缓冲，多线程进行数据存储;其实python 的多线程是伪线程，最后更换为多进程)。
+        第三版本：
+            Thinkphp5.0(api框架)+MySQL(业务数据库)+MongoDB(用于存储硬件上报数据)+AliIot+AliFc；
+            (采用阿里云物联网平台，将数据上报并发交给了阿里云，采用fc进行存储到MongoDB);
+            此方案 并不是因为第二版本的方案支持不了，而是因为 硬件在这一版本时 更换为了阿里的硬件，
+            而他自带的AliIot产品与之匹配度 更高，效率更高才选择更换，
+            为什么会用到MongoDB，而是偶然的一次机会了解到 MongoDB的切片机制所以才选择使用此数据库作为，
+            硬件数据的存储。
+```
+易科芯（呼叫平台）
+```text
+    一款呼叫平台，主要针对电销行业平台，减轻电销成本等，
+通过自己定制话术，通过用户对话翻译，然后进行关键词匹配，进行回拨录音等，由于19年315 公司被查，详情微博搜易科芯
+责任描述：
+    主要负责开发，以及电话号码采集。
+    项目(合作开发)：CMS 开发 tp3.2+memcache+mysql
+    号码采集(独立开发)：python+threading+request+bs4+socket+redis
+```
+找公交（小程序）（官网：www.zhaogongjiao.com; ）
+```text
+    一款关于出行公交查询的小程序，站点的查询，公交的实时位置，
+计划方案：第一阶段我们是做小程序;第二阶段是做APP;最初的构想，就以扫码或指纹的方式来替代
+公交卡，使出行更方便，但由于我们对物联网不是很了解以为目前的4G不能达到其所用有的效果，
+所以一直在等候5G的到来，但是呢阿里与腾讯已经做好了，所以此计划一直没有往下走。
 ```
