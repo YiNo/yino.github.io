@@ -36,6 +36,7 @@ headless: false
   - [常见函数]({{< relref "/wiki/MySql/常见函数.md" >}})
   
 - [Redis]({{< relref "/wiki/Redis/" >}})
+  - [异步复制]({{< relref "/wiki/Redis/异步复制.md" >}})
   
 - [Mango]({{< relref "/wiki/Mango/" >}})
   <br />
@@ -43,6 +44,7 @@ headless: false
 - **WebServer**
   
 - [Nginx]({{< relref "/wiki/Nginx/" >}})
+  - [禁网段]({{< relref "/wiki/Nginx/禁网段.md" >}})
   <br />
 
 - **Linux**
