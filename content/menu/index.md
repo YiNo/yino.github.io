@@ -28,7 +28,15 @@ headless: false
 
 - **数据库**
 - [MySql]({{< relref "/wiki/MySql/" >}})
+  - [事务隔离级别]({{< relref "/wiki/MySql/事务隔离级别.md" >}})
+  - [mysql异步复制]({{< relref "/wiki/MySql/mysql异步复制.md" >}})
+  - [创建函数]({{< relref "/wiki/MySql/创建函数.md" >}})
+  - [忘记密码]({{< relref "/wiki/MySql/忘记密码.md" >}})
+  - [创建用户并授权]({{< relref "/wiki/MySql/创建用户并授权.md" >}})
+  - [常见函数]({{< relref "/wiki/MySql/常见函数.md" >}})
+  
 - [Redis]({{< relref "/wiki/Redis/" >}})
+  
 - [Mango]({{< relref "/wiki/Mango/" >}})
   <br />
   
