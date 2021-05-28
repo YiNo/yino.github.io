@@ -23,7 +23,7 @@ headless: false
   - [对象与数组相互转换]({{< relref "/wiki/PHP/function/对象与数组相互转换.md" >}})
   
 - [VUE]({{< relref "/wiki/VUE/" >}})
-
+  - [iView案例]({{< relref "/wiki/VUE/iView案例.md" >}})
 <br />
 
 - **数据库**
