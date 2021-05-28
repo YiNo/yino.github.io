@@ -1,85 +1,93 @@
+# [Golang-Laravel](https://github.com/sun17ya/golang-laravel)
+
+
+模仿PHP-Laravel，开箱即用、go语言版的laravel，phper转Go开发 可以立马上手~
+
+#### package
+* [gin](https://github.com/gin-gonic/gin)
+* [gorm](http://gorm.book.jasperxu.com/)
+* [go-redis](https://github.com/go-redis/redis)
+* [go laravel](https://github.com/sun17ya/golang-laravel)
 ---
-weight: 10
+#### 支持功能
+* 路由
+* 中间件
+* 路由中间件
+* 控制器
+* 模型
+* 验证器（*默认是英文，将其翻译为中文）
 ---
+#### 目录结构
+与laravel几乎一模一样
 
-# Ubi loqui
+    app					        应用目录
+    |---- exception				        返回http状态及异常接收
+	|----|---- baseException.go 	                panic异常接收文件
+    |---- http					web核心目录
+	|----|---- controller 		 	        控制器存放目录
+	|----|---- middleware 		 	        路由中间件存放目录
+    |---- models				        模型存放目录
+    |---- service					业务编写目录
+    |---- validate					验证器目录
+    |---- helpers.go 				常用函数文件
+    config
+    |----|----app.go  				应用配置 如：ip、port等
+    |----|----databases.go  			数据库配置
+    extend						自定义扩展包
+    |----|---- log		                        自定义日志package(与系统log相同，增加按小时分割日志)
+    routes						路由文件夹
+	|----|---- route.go				路由控制目录
+	|----|---- .....				更多路由
+    sql						测试sql文件存放目录
+    test 						压力测试文件目录
+    |----|---- abtest.sh                            ab压力测试文件
+    |----|---- .....				配置 Or Log文件          
+    vendor						扩展包目录
+	|----|---- .....				包存放
 
-## Mentem genus facietque salire tempus bracchia
 
-Lorem markdownum partu paterno Achillem. Habent amne generosi aderant ad pellem
-nec erat sustinet merces columque haec et, dixit minus nutrit accipiam subibis
-subdidit. Temeraria servatum agros qui sed fulva facta. Primum ultima, dedit,
-suo quisque linguae medentes fixo: tum petis.
+* 还在完善中
+* 目前发现不合理地方 在返回success状态码 目前是用panic抛出异常返回，有为常理。
+* 注意路由文件编写，必须 在router.go文件中调用
+* 将sql/databases.go 文件 数据连接信息一改，运行 go run main.go 即可使用
 
-## Rapit vocant si hunc siste adspice
+---
+#### 项目注意事项
+1. 重新定义 log(`/extend/log`)模块 将日志分割 storage/logs/`Year`/`Month`/`Day`/`Hour.txt`
+2. gorm 更改了 软删除 默认是 is null(`/vendor/github.com/jinzhu/gorm/scope.go line 719`) 本项目更改为 deleted_at=0 根据自己项目需求更改
+3. `config/database.go` mysql 连接配置 需
+4. `config/redis.go` redis 连接配置 需修改
+5. 路由 在 `/routes` 中定义 要在 route.go 引入自己创建的 目前并不会自动引入
+6. 运行命令  go run main.go
 
-Ora precari Patraeque Neptunia, dixit Danae [Cithaeron
-armaque](http://mersis-an.org/litoristum) maxima in **nati Coniugis** templis
-fluidove. Effugit usus nec ingreditur agmen *ac manus* conlato. Nullis vagis
-nequiquam vultibus aliquos altera *suum venis* teneas fretum. Armos [remotis
-hoc](http://tutum.io/me) sine ferrea iuncta quam!
 
-## Locus fuit caecis
+---
+#### go语言常用简介
+`自己总结有误则提醒，修改`
+1. defer 延迟执行 defer标识的函数 在当前函数末尾执行 多个defer时以“压栈”的方式执行（先进后出）
+   例：main.go 中的 mysql、redis关闭连接
+2. struct 结构体 go 语言没有class的概念 但是可以通过结构体来实现 class
+3. 输出到控制台 fmt.Println("string") 本项目中 可以使用log.Println("....") 输出到控制台同时记录log
+4. 常用数据结构 map int string float64 struct interface等
+5. 在数据类型是interface时 引用时 要进行‘断言’ `示例：/app/models/baseModel.go line 29`
+---
+#### 更新log
 
-Nefas discordemque domino montes numen tum humili nexilibusque exit, Iove. Quae
-miror esse, scelerisque Melaneus viribus. Miseri laurus. Hoc est proposita me
-ante aliquid, aura inponere candidioribus quidque accendit bella, sumpta.
-Intravit quam erat figentem hunc, motus de fontes parvo tempestate.
-
-    iscsi_virus = pitch(json_in_on(eupViral),
-            northbridge_services_troubleshooting, personal(
-            firmware_rw.trash_rw_crm.device(interactive_gopher_personal,
-            software, -1), megabit, ergonomicsSoftware(cmyk_usb_panel,
-            mips_whitelist_duplex, cpa)));
-    if (5) {
-        managementNetwork += dma - boolean;
-        kilohertz_token = 2;
-        honeypot_affiliate_ergonomics = fiber;
-    }
-    mouseNorthbridge = byte(nybble_xmp_modem.horse_subnet(
-            analogThroughputService * graphicPoint, drop(daw_bit, dnsIntranet),
-            gateway_ospf), repository.domain_key.mouse(serverData(fileNetwork,
-            trim_duplex_file), cellTapeDirect, token_tooltip_mashup(
-            ripcordingMashup)));
-    module_it = honeypot_driver(client_cold_dvr(593902, ripping_frequency) +
-            coreLog.joystick(componentUdpLink), windows_expansion_touchscreen);
-    bashGigabit.external.reality(2, server_hardware_codec.flops.ebookSampling(
-            ciscNavigationBacklink, table + cleanDriver), indexProtocolIsp);
-
-## Placabilis coactis nega ingemuit ignoscat nimia non
-
-Frontis turba. Oculi gravis est Delphice; *inque praedaque* sanguine manu non.
-
-    if (ad_api) {
-        zif += usb.tiffAvatarRate(subnet, digital_rt) + exploitDrive;
-        gigaflops(2 - bluetooth, edi_asp_memory.gopher(queryCursor, laptop),
-                panel_point_firmware);
-        spyware_bash.statePopApplet = express_netbios_digital(
-                insertion_troubleshooting.brouter(recordFolderUs), 65);
-    }
-    recursionCoreRay = -5;
-    if (hub == non) {
-        portBoxVirus = soundWeb(recursive_card(rwTechnologyLeopard),
-                font_radcab, guidCmsScalable + reciprocalMatrixPim);
-        left.bug = screenshot;
-    } else {
-        tooltipOpacity = raw_process_permalink(webcamFontUser, -1);
-        executable_router += tape;
-    }
-    if (tft) {
-        bandwidthWeb *= social_page;
-    } else {
-        regular += 611883;
-        thumbnail /= system_lag_keyboard;
-    }
-
-## Caesorum illa tu sentit micat vestes papyriferi
-
-Inde aderam facti; Theseus vis de tauri illa peream. Oculos **uberaque** non
-regisque vobis cursuque, opus venit quam vulnera. Et maiora necemque, lege modo;
-gestanda nitidi, vero? Dum ne pectoraque testantur.
-
-Venasque repulsa Samos qui, exspectatum eram animosque hinc, [aut
-manes](http://www.creveratnon.net/apricaaetheriis), Assyrii. Cupiens auctoribus
-pariter rubet, profana magni super nocens. Vos ius sibilat inpar turba visae
-iusto! Sedes ante dum superest **extrema**.
+##### 2020-11-09
+1. mysql连接池验证 压力测试
+2. 增加自定义log模块 (在config中自定义log路径，package path /extend/log，按小时分割日志)
+3. 增加压力测试模块
+##### 2020-11-06
+1. 增加mysql连接池
+##### 2020-11-10
+1. 增加redis 连接池
+##### 2020-11-11
+1. 修改log模块 获取当天日期
+2. 增加autoload 将方法封装 使入口文件简单清晰
+##### 2020-12-31 示例
+1. 增加 example 示例 包含 server(BE)、template(FE)
+2. 可运行docker-compose （go 环境）
+3. 将 server/sql 文件导入到本地库中
+4. 修改config 的ip
+5. post-man-go-api.json 所有的 api json 文件
+6. server /extend 中增加了对redis 的log记录 以及前缀

@@ -3,26 +3,30 @@ headless: false
 ---
 
 - **语言**
-- [Golang]({{< relref "/wiki/go/index" >}})
+- [Golang]({{< relref "/wiki/go/" >}})
   - [go-laravel]({{< relref "/wiki/go/go-laravel.md" >}})
-  - [yTask]({{< relref "/wiki/go/y-task.md" >}})
+  - [垃圾回收]({{< relref "/wiki/go/垃圾回收.md" >}})
+  - [Go并发原理及GPM调度策略]({{< relref "/wiki/go/Go并发原理及GPM调度策略.md" >}})
 
-- [Python]({{< relref "/wiki/python/index.md" >}})
+- [Python]({{< relref "/wiki/python/" >}})
 
-- [PHP]({{< relref "/wiki/PHP/index.md" >}})
+- [PHP]({{< relref "/wiki/PHP/" >}})
 
-- [VUE]({{< relref "/wiki/VUE/index.md" >}})
+- [VUE]({{< relref "/wiki/VUE/" >}})
 
 <br />
 
 - **数据库**
-- [MySql]({{< relref "/wiki/MySql/index.md" >}})
-- [Redis]({{< relref "/wiki/Redis/index.md" >}})
-- [Mango]({{< relref "/wiki/Mango/index.md" >}})
+- [MySql]({{< relref "/wiki/MySql/" >}})
+- [Redis]({{< relref "/wiki/Redis/" >}})
+- [Mango]({{< relref "/wiki/Mango/" >}})
   <br />
+  
 - **WebServer**
-- [Nginx]({{< relref "/wiki/Nginx/index.md" >}})
+  
+- [Nginx]({{< relref "/wiki/Nginx/" >}})
   <br />
 
 - **Linux**
+  
 - **docker**
