@@ -27,6 +27,7 @@ headless: false
 <br />
 
 - **数据库**
+  
 - [MySql]({{< relref "/wiki/MySql/" >}})
   - [事务隔离级别]({{< relref "/wiki/MySql/事务隔离级别.md" >}})
   - [mysql异步复制]({{< relref "/wiki/MySql/mysql异步复制.md" >}})
@@ -45,14 +46,20 @@ headless: false
   
 - [Nginx]({{< relref "/wiki/Nginx/" >}})
   - [禁网段]({{< relref "/wiki/Nginx/禁网段.md" >}})
-  <br />
+<br />
 
 - **Linux**
+  - [CentOS搭建Shadowsocks服务端]({{< relref "/wiki/Linux/CentOS搭建Shadowsocks服务端.md" >}})
+  - [常用命令]({{< relref "/wiki/Linux/常用命令.md" >}})
   
 - **docker**
+  - [常用命令]({{< relref "/wiki/Docker/常用命令.md" >}})
   
 - **微服务**
-- [consul]({{< relref "/wiki/微服务/consul.md" >}})
+  - [consul]({{< relref "/wiki/微服务/consul.md" >}})
 
 - **领域驱动设计**
-- [consul]({{< relref "/wiki/微服务/consul.md" >}})
+  - [示例]({{< relref "/wiki/DDD/示例.md" >}})
+  - [domain]({{< relref "/wiki/DDD/domain.md" >}})
+  - [PO-DO-VO-DTO]({{< relref "/wiki/DDD/PO-DO-VO-DTO.md" >}})
+  - [步骤]({{< relref "/wiki/DDD/步骤.md" >}})
