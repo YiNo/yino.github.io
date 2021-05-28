@@ -2,10 +2,11 @@
 title: 简介
 type: docs
 ---
-   Hello，我是孙十七，这是我个人的一个博客及笔记，欢迎来看；会不定期的更新，谢谢。
+Hello，我是孙十七，这是我个人的一个博客及笔记，欢迎来看；会不定期的更新，谢谢。
 
-   项目经验：
-   壳牌润滑油（壳牌公司内部项目）
+## 项目经验：
+
+### 壳牌润滑油（壳牌公司内部项目）
 ```text
     是一个直播电商项目给公司内部的代理商供货，曾单日6个小时创下业绩2亿
     职责：开发
@@ -13,7 +14,8 @@ type: docs
     数据库：redis+mysql mysql 主从 redis负责处理订单、人员权限等热数据 用于减少mysql压力
     webserver: 5台nginx负载
 ```
-NLP-QA [模型算法地址](https://github.com/sun17ya/nlp-tf-idf)
+
+### NLP-QA [模型算法地址](https://github.com/sun17ya/nlp-tf-idf)
 ```text
 自己研发的一个nlp平台主要做一下关于nlp方面的api网站，可以提升自己，同时将所有api开源能提供给更多的开发者
     1). 前端采用vue（vue-admin）做展示层
@@ -26,12 +28,12 @@ NLP-QA [模型算法地址](https://github.com/sun17ya/nlp-tf-idf)
     
 ```
 
-[Go-laravel](https://github.com/sun17ya/golang-laravel)
+### [Go-laravel](https://github.com/sun17ya/golang-laravel)
 ```text
 模仿Laravel框架开发 可以让PHP开发快速上手GO开发
 ```
 
-锦鑫智客服语机器人（微信公众号）
+### 锦鑫智客服语机器人（微信公众号）
 ```text
 此项目是智能客服系统，帮助企业等一系列线上服务行业咨询类问题回答，减少客服的成本与效率。
 责任描述：
