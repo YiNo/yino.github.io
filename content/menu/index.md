@@ -7,6 +7,7 @@ headless: false
   - [go-laravel]({{< relref "/wiki/go/go-laravel.md" >}})
   - [垃圾回收]({{< relref "/wiki/go/垃圾回收.md" >}})
   - [Go并发原理及GPM调度策略]({{< relref "/wiki/go/Go并发原理及GPM调度策略.md" >}})
+  - [常用函数库]({{< relref "/wiki/go/常用函数库.md" >}})
 
 - [Python]({{< relref "/wiki/Python/" >}})
   - [selenium]({{< relref "/wiki/Python/selenium.md" >}})
@@ -63,4 +64,3 @@ headless: false
   - [domain]({{< relref "/wiki/DDD/domain.md" >}})
   - [PO-DO-VO-DTO]({{< relref "/wiki/DDD/PO-DO-VO-DTO.md" >}})
   - [步骤]({{< relref "/wiki/DDD/步骤.md" >}})
-  
