@@ -1,5 +1,5 @@
 # **nlp-qa-tfidf**
-[项目地址](https://github.com/sun17ya/nlp-tf-idf/)
+[项目地址](https://github.com/yino/nlp-tf-idf/)
 
 #### 介绍
 tfidf
