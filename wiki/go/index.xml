@@ -27,4 +27,6 @@ golang 的垃圾回收我们经常听到三色标记法，三色指的是白色�
 怎么把垃圾找出来？ # 方法：从根处扫描，把所有的根扫描完，每个根扫描到底。按照之前的三色标记来说，扫描完了的是黑色，正在扫描的是灰色的，没扫描的是白色的。根扫描完了，那么最后只会剩下两种颜色的，黑色，白色。白色就是没用的垃圾，这种清理掉就没事。
 根：栈，是扫描的起点，还有一些全局变量也是根，是起点
 所谓的垃圾只对于堆上来说。栈上内存是编译器管理的，堆上内存是业务分配，垃圾回收器回收
-垃圾怎么回收？怎么有效安全的回收？ # 起初的是最简单的思路STW(stop the world)，暂停所有程序，等待垃圾回收完再运行程序。当然这种模式在生产中不合适后又优化为 扫描-标记-清除</description></item></channel></rss>
+垃圾怎么回收？怎么有效安全的回收？ # 起初的是最简单的思路STW(stop the world)，暂停所有程序，等待垃圾回收完再运行程序。当然这种模式在生产中不合适后又优化为 扫描-标记-清除</description></item><item><title/><link>https://kangkang17.cn/wiki/go/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E5%BA%93/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kangkang17.cn/wiki/go/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E5%BA%93/</guid><description>Golang-common # InArray # 判断对象是否在 array 中 返回 bool
+ArraySearch # 判断对象是否在 array 中 返回 int, bool (false 则不存在)
+MapSearch # 判断对象是否在 map 中 返回interface, bool (false 则不存在)</description></item></channel></rss>
