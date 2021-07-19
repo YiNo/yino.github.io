@@ -64,3 +64,8 @@ headless: false
   - [domain]({{< relref "/wiki/DDD/domain.md" >}})
   - [PO-DO-VO-DTO]({{< relref "/wiki/DDD/PO-DO-VO-DTO.md" >}})
   - [步骤]({{< relref "/wiki/DDD/步骤.md" >}})
+    <br />
+- **目标/规划**
+
+- [目标]({{< relref "/wiki/Target/target.md" >}})
+- [规划]({{< relref "/wiki/Target/program.md" >}})
