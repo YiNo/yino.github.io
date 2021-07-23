@@ -3,20 +3,21 @@
 <meta name=generator content="Hugo 0.86.0">
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content>
-<meta name=theme-color content="#FFFFFF"><meta property="og:title" content="Linux">
-<meta property="og:description" content>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://kangkang17.cn/wiki/Linux/">
-<title>Linux | sun17 wiki</title>
+<meta name=description content="用户分组 #  场景， #  比如刚下载docker、nginx等一些应用时，使用 sudo下载，则当前用户没有权限去操作此应用
+# 查看分组 cat /etc/group # 查看当前用户 $USER #将当前用户添加到 分组中 xxx代表分组 sudo gpasswd -a $USER xxx # 切换到xxx分组 xxx 代表分组 newgrp xxx ">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
+<meta property="og:description" content="用户分组 #  场景， #  比如刚下载docker、nginx等一些应用时，使用 sudo下载，则当前用户没有权限去操作此应用
+# 查看分组 cat /etc/group # 查看当前用户 $USER #将当前用户添加到 分组中 xxx代表分组 sudo gpasswd -a $USER xxx # 切换到xxx分组 xxx 代表分组 newgrp xxx ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kangkang17.cn/wiki/Linux/%E5%88%86%E7%BB%84/"><meta property="article:section" content="wiki">
+<title>分组 | sun17 wiki</title>
 <link rel=manifest href=/manifest.json>
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.1639cc58b39d753e5ce211e45ca1950799431f352ff7bd1baadfa7fcedfe8043.css integrity="sha256-FjnMWLOddT5c4hHkXKGVB5lDHzUv970bqt+n/O3+gEM=">
 <script defer src=/en.search.min.e66c12f66946c4ee5013a18572ecdda80ae31b1498fc444725e089951a9ffb81.js integrity="sha256-5mwS9mlGxO5QE6GFcuzdqArjGxSY/ERHJeCJlRqf+4E="></script>
 <script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk="></script>
 <link rel=apple-touch-icon sizes=128x128 href=128x128.jpg>
-<script>var _hmt=_hmt||[];(function(){var a=document.createElement("script"),b;a.src="https://hm.baidu.com/hm.js?65e05e8c0631a0d2802629f8ceb31fee",b=document.getElementsByTagName("script")[0],b.parentNode.insertBefore(a,b),console.log("欢迎加入，https://airdb.dev"),console.log("Welcome，https://airdb.dev")})()</script><link rel=alternate type=application/rss+xml href=https://kangkang17.cn/wiki/Linux/index.xml title="sun17 wiki">
-<nav class="app-nav pc no-badge">
+<script>var _hmt=_hmt||[];(function(){var a=document.createElement("script"),b;a.src="https://hm.baidu.com/hm.js?65e05e8c0631a0d2802629f8ceb31fee",b=document.getElementsByTagName("script")[0],b.parentNode.insertBefore(a,b),console.log("欢迎加入，https://airdb.dev"),console.log("Welcome，https://airdb.dev")})()</script><nav class="app-nav pc no-badge">
 <div class=logo>
 <a href=//airdb.dev/ target=__blank class=dcloud-logo></a>
 <a href=./ class="uniapp-logo active"></a>
@@ -210,14 +211,14 @@
 <li>
 <input type=checkbox id=section-8486738ebb1d1cb03149de5f7a32b760 class=toggle checked>
 <label for=section-8486738ebb1d1cb03149de5f7a32b760 class="flex justify-between">
-<a class=active>Linux</a>
+<a>Linux</a>
 </label>
 <ul>
 <li>
 <a href=https://kangkang17.cn/wiki/Linux/CentOS%E6%90%AD%E5%BB%BAShadowsocks%E6%9C%8D%E5%8A%A1%E7%AB%AF/>Cent Os搭建 Shadowsocks服务端</a>
 </li>
 <li>
-<a href=https://kangkang17.cn/wiki/Linux/%E5%88%86%E7%BB%84/>分组</a>
+<a href=https://kangkang17.cn/wiki/Linux/%E5%88%86%E7%BB%84/ class=active>分组</a>
 </li>
 <li>
 <a href=https://kangkang17.cn/wiki/Linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/>常用命令</a>
@@ -292,36 +293,79 @@
 <label for=menu-control>
 <img src=/svg/menu.svg class=book-icon alt=Menu>
 </label>
-<strong>Linux</strong>
+<strong>分组</strong>
 <label for=toc-control>
 <img src=/svg/toc.svg class=book-icon alt="Table of Contents">
 </label>
 </div>
 <aside class="hidden clearfix">
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li></li>
+<li><a href=#场景>场景，</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
 </aside>
 </header>
-<article class=markdown></article>
+<article class=markdown><h4 id=用户分组>
+用户分组
+<a class=anchor href=#%e7%94%a8%e6%88%b7%e5%88%86%e7%bb%84>#</a>
+</h4>
+<h3 id=场景>
+场景，
+<a class=anchor href=#%e5%9c%ba%e6%99%af>#</a>
+</h3>
+<p>比如刚下载docker、nginx等一些应用时，使用 sudo下载，则当前用户没有权限去操作此应用</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e># 查看分组</span>
+cat /etc/group
+
+<span style=color:#75715e># 查看当前用户</span>
+$USER
+
+<span style=color:#75715e>#将当前用户添加到 分组中 xxx代表分组</span>
+sudo gpasswd -a $USER xxx
+
+<span style=color:#75715e># 切换到xxx分组 xxx 代表分组</span>
+newgrp xxx
+</code></pre></div></article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
-<div><a class="flex align-center" href=https://github.com/yino/yino.github.io/commit/dcbf7e37ef76ffb1a009644f701c09779a05b4ae title="Last modified by sk532359025 | Mon May 31 14:53:21 UTC 2021" target=_blank rel=noopener>
-<img src=/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Mon May 31 14:53:21 UTC 2021</span>
-</a>
-</div>
 <div>
-<a class="flex align-center" href=https://github.com/yino/yino.github.io/edit/main/exampleSite/content/wiki/Linux/_index.md target=_blank rel=noopener>
+<a class="flex align-center" href=https://github.com/yino/yino.github.io/edit/main/exampleSite/content/wiki/Linux/%e5%88%86%e7%bb%84.md target=_blank rel=noopener>
 <img src=/svg/edit.svg class=book-icon alt=Edit>
 <span>Edit this page</span>
 </a>
 </div>
 </div>
 </footer>
+<div class=book-comments>
+</div>
 <label for=menu-control class="hidden book-menu-overlay"></label>
 </div>
 <aside class=book-toc>
 <div class=book-toc-content>
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li></li>
+<li><a href=#场景>场景，</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
 </div>
 </aside>
 </main>
