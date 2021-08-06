@@ -20,8 +20,7 @@ pandas
 
 #### 安装教程
 
- pip install -i https://mirrors.aliyun.com/pypi/simple/ -r requirements.txt
-
+可以直接通过 pip instsall nlp_tfidf 安装
 #### 使用说明
 
 1.  运行qa文件
