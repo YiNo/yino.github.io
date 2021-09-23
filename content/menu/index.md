@@ -47,6 +47,7 @@ headless: false
   
 - [Nginx]({{< relref "/wiki/Nginx/" >}})
   - [禁网段]({{< relref "/wiki/Nginx/禁网段.md" >}})
+  - [rewrite与proxy_pass]({{< relref "/wiki/Nginx/rewrite与proxy_pass.md" >}})
 <br />
 
 - **Linux**
