@@ -3,20 +3,19 @@
 <meta name=generator content="Hugo 0.88.1">
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content>
-<meta name=theme-color content="#FFFFFF"><meta property="og:title" content="VUE">
-<meta property="og:description" content>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://kangkang17.cn/wiki/VUE/">
-<title>VUE | sun17 wiki</title>
+<meta name=description content="rewrite 与 proxy_pass #  rewrite #   如果正则表达式（regex）匹配到了请求的URI（request URI），这个URI会被后面的replacement替换 rewrite的定向会根据他们在配置文件中出现的顺序依次执行 通过使用flag可以终止定向后进一步的处理 如果replacement以“http://”, “https://”, or “$scheme”开头，处理将会终止，请求结果会以重定向的形式返回给客户端（client） 如果replacement字符串里有新的request参数，那么之前的参数会附加到其后面，如果要避免这种情况，那就在replacement字符串后面加上“？”，eg： rewrite相当于是重定向到了目标网站，浏览器会跳转到目标网站  rewrite ^/users/(.*)$ /?user=$1? last;= proxy_pass #   不影响浏览器地址栏的url 设置被代理server的协议和地址，URI可选（可以有，也可以没有） 协议可以为http或https 地址可以为域名或者IP，端口可选；eg：  proxy_pass http://localhost:8000/uri/;  如果proxy_pass的URL定向里包括URI，那么请求中匹配到location中URI的部分会被proxy_pass后面URL中的URI替换，eg：  location /name/ { proxy_pass http://127.0.0.1/remote/; } 请求http://example.com/name/test.html 会被代理到http://127.0.0.1/remote/test.html  如果proxy_pass的URL定向里不包括URI，那么请求中的URI会保持原样传送给后端server，eg：  location /name/ { proxy_pass http://127.0.0.1; } 请求http://example/name/test.html 会被代理到http://127.0.0.1/name/test.html ">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
+<meta property="og:description" content="rewrite 与 proxy_pass #  rewrite #   如果正则表达式（regex）匹配到了请求的URI（request URI），这个URI会被后面的replacement替换 rewrite的定向会根据他们在配置文件中出现的顺序依次执行 通过使用flag可以终止定向后进一步的处理 如果replacement以“http://”, “https://”, or “$scheme”开头，处理将会终止，请求结果会以重定向的形式返回给客户端（client） 如果replacement字符串里有新的request参数，那么之前的参数会附加到其后面，如果要避免这种情况，那就在replacement字符串后面加上“？”，eg： rewrite相当于是重定向到了目标网站，浏览器会跳转到目标网站  rewrite ^/users/(.*)$ /?user=$1? last;= proxy_pass #   不影响浏览器地址栏的url 设置被代理server的协议和地址，URI可选（可以有，也可以没有） 协议可以为http或https 地址可以为域名或者IP，端口可选；eg：  proxy_pass http://localhost:8000/uri/;  如果proxy_pass的URL定向里包括URI，那么请求中匹配到location中URI的部分会被proxy_pass后面URL中的URI替换，eg：  location /name/ { proxy_pass http://127.0.0.1/remote/; } 请求http://example.com/name/test.html 会被代理到http://127.0.0.1/remote/test.html  如果proxy_pass的URL定向里不包括URI，那么请求中的URI会保持原样传送给后端server，eg：  location /name/ { proxy_pass http://127.0.0.1; } 请求http://example/name/test.html 会被代理到http://127.0.0.1/name/test.html ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kangkang17.cn/wiki/Nginx/rewrite%E4%B8%8Eproxy_pass/"><meta property="article:section" content="wiki">
+<title>Rewrite与proxy Pass | sun17 wiki</title>
 <link rel=manifest href=/manifest.json>
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.1639cc58b39d753e5ce211e45ca1950799431f352ff7bd1baadfa7fcedfe8043.css integrity="sha256-FjnMWLOddT5c4hHkXKGVB5lDHzUv970bqt+n/O3+gEM=">
 <script defer src=/en.search.min.f35c6045964f2142d3c84bc853859d44239f666ccb2cb38a18f5b6308b00100a.js integrity="sha256-81xgRZZPIULTyEvIU4WdRCOfZmzLLLOKGPW2MIsAEAo="></script>
 <script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk="></script>
 <link rel=apple-touch-icon sizes=128x128 href=128x128.jpg>
-<script>var _hmt=_hmt||[];(function(){var a=document.createElement("script"),b;a.src="https://hm.baidu.com/hm.js?65e05e8c0631a0d2802629f8ceb31fee",b=document.getElementsByTagName("script")[0],b.parentNode.insertBefore(a,b),console.log("欢迎加入，https://airdb.dev"),console.log("Welcome，https://airdb.dev")})()</script><link rel=alternate type=application/rss+xml href=https://kangkang17.cn/wiki/VUE/index.xml title="sun17 wiki">
-<nav class="app-nav pc no-badge">
+<script>var _hmt=_hmt||[];(function(){var a=document.createElement("script"),b;a.src="https://hm.baidu.com/hm.js?65e05e8c0631a0d2802629f8ceb31fee",b=document.getElementsByTagName("script")[0],b.parentNode.insertBefore(a,b),console.log("欢迎加入，https://airdb.dev"),console.log("Welcome，https://airdb.dev")})()</script><nav class="app-nav pc no-badge">
 <div class=logo>
 <a href=//airdb.dev/ target=__blank class=dcloud-logo></a>
 <a href=./ class="uniapp-logo active"></a>
@@ -127,9 +126,9 @@
 </ul>
 </li>
 <li>
-<input type=checkbox id=section-6e6a8835e036b143f2b10bfed21ac4e1 class=toggle checked>
+<input type=checkbox id=section-6e6a8835e036b143f2b10bfed21ac4e1 class=toggle>
 <label for=section-6e6a8835e036b143f2b10bfed21ac4e1 class="flex justify-between">
-<a class=active>VUE</a>
+<a>VUE</a>
 </label>
 <ul>
 <li>
@@ -200,13 +199,13 @@
 </ul>
 </li>
 <li>
-<input type=checkbox id=section-a176d5b766c2baa0491680256887e2da class=toggle>
+<input type=checkbox id=section-a176d5b766c2baa0491680256887e2da class=toggle checked>
 <label for=section-a176d5b766c2baa0491680256887e2da class="flex justify-between">
 <a>Nginx</a>
 </label>
 <ul>
 <li>
-<a href=https://kangkang17.cn/wiki/Nginx/rewrite%E4%B8%8Eproxy_pass/>Rewrite与proxy Pass</a>
+<a href=https://kangkang17.cn/wiki/Nginx/rewrite%E4%B8%8Eproxy_pass/ class=active>Rewrite与proxy Pass</a>
 </li>
 <li>
 <a href=https://kangkang17.cn/wiki/Nginx/%E7%A6%81%E7%BD%91%E6%AE%B5/>禁网段</a>
@@ -298,36 +297,100 @@
 <label for=menu-control>
 <img src=/svg/menu.svg class=book-icon alt=Menu>
 </label>
-<strong>VUE</strong>
+<strong>Rewrite与proxy Pass</strong>
 <label for=toc-control>
 <img src=/svg/toc.svg class=book-icon alt="Table of Contents">
 </label>
 </div>
 <aside class="hidden clearfix">
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href=#rewrite-与-proxy_pass>rewrite 与 proxy_pass</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
 </aside>
 </header>
-<article class=markdown></article>
+<article class=markdown><h3 id=rewrite-与-proxy_pass>
+rewrite 与 proxy_pass
+<a class=anchor href=#rewrite-%e4%b8%8e-proxy_pass>#</a>
+</h3>
+<h4 id=rewrite>
+rewrite
+<a class=anchor href=#rewrite>#</a>
+</h4>
+<ul>
+<li>如果正则表达式（regex）匹配到了请求的URI（request URI），这个URI会被后面的replacement替换</li>
+<li>rewrite的定向会根据他们在配置文件中出现的顺序依次执行</li>
+<li>通过使用flag可以终止定向后进一步的处理</li>
+<li>如果replacement以“http://”, “https://”, or “$scheme”开头，处理将会终止，请求结果会以重定向的形式返回给客户端（client）</li>
+<li>如果replacement字符串里有新的request参数，那么之前的参数会附加到其后面，如果要避免这种情况，那就在replacement字符串后面加上“？”，eg：</li>
+<li>rewrite相当于是重定向到了目标网站，<strong>浏览器会跳转到目标网站</strong></li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text> rewrite ^/users/(.*)$ /?user=$1? last;=
+</code></pre></div><h4 id=proxy_pass>
+proxy_pass
+<a class=anchor href=#proxy_pass>#</a>
+</h4>
+<ul>
+<li><strong>不影响浏览器地址栏的url</strong></li>
+<li>设置被代理server的协议和地址，URI可选（可以有，也可以没有）</li>
+<li>协议可以为http或https</li>
+<li>地址可以为域名或者IP，端口可选；eg：</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text> proxy_pass http://localhost:8000/uri/;
+</code></pre></div><ul>
+<li>如果proxy_pass的URL定向里包括URI，那么请求中匹配到location中URI的部分会被proxy_pass后面URL中的URI替换，eg：</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>location /name/ {
+    proxy_pass http://127.0.0.1/remote/;
+}
+请求http://example.com/name/test.html 会被代理到http://127.0.0.1/remote/test.html
+</code></pre></div><ul>
+<li>如果proxy_pass的URL定向里不包括URI，那么请求中的URI会保持原样传送给后端server，eg：</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>location /name/ {
+    proxy_pass http://127.0.0.1;
+}
+
+请求http://example/name/test.html 会被代理到http://127.0.0.1/name/test.html
+</code></pre></div></article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
-<div><a class="flex align-center" href=https://github.com/yino/yino.github.io/commit/481d3be48cfdaf959c87940d2ab5414c06974416 title="Last modified by sk532359025 | Fri May 28 07:38:18 UTC 2021" target=_blank rel=noopener>
-<img src=/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Fri May 28 07:38:18 UTC 2021</span>
-</a>
-</div>
 <div>
-<a class="flex align-center" href=https://github.com/yino/yino.github.io/edit/main/exampleSite/content/wiki/VUE/_index.md target=_blank rel=noopener>
+<a class="flex align-center" href=https://github.com/yino/yino.github.io/edit/main/exampleSite/content/wiki/Nginx/rewrite%e4%b8%8eproxy_pass.md target=_blank rel=noopener>
 <img src=/svg/edit.svg class=book-icon alt=Edit>
 <span>Edit this page</span>
 </a>
 </div>
 </div>
 </footer>
+<div class=book-comments>
+</div>
 <label for=menu-control class="hidden book-menu-overlay"></label>
 </div>
 <aside class=book-toc>
 <div class=book-toc-content>
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href=#rewrite-与-proxy_pass>rewrite 与 proxy_pass</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
 </div>
 </aside>
 </main>

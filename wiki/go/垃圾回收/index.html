@@ -1,6 +1,6 @@
 <!doctype html><html lang=en dir=ltr>
 <head>
-<meta name=generator content="Hugo 0.86.0">
+<meta name=generator content="Hugo 0.88.1">
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=description content="垃圾回收 #   概述 GC & RC  垃圾回收的由来 逃逸分析的由来   垃圾回收，怎么实现？  什么样的是垃圾？ 怎么把垃圾找出来？ 内存屏障    概述 #  现代编程语言一般都有垃圾回收功能。这个能极大的减轻程序员的负担，并且减少大部分场景的问题。
@@ -16,7 +16,7 @@ golang 的垃圾回收我们经常听到三色标记法，三色指的是白色�
 <link rel=manifest href=/manifest.json>
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.1639cc58b39d753e5ce211e45ca1950799431f352ff7bd1baadfa7fcedfe8043.css integrity="sha256-FjnMWLOddT5c4hHkXKGVB5lDHzUv970bqt+n/O3+gEM=">
-<script defer src=/en.search.min.e66c12f66946c4ee5013a18572ecdda80ae31b1498fc444725e089951a9ffb81.js integrity="sha256-5mwS9mlGxO5QE6GFcuzdqArjGxSY/ERHJeCJlRqf+4E="></script>
+<script defer src=/en.search.min.f35c6045964f2142d3c84bc853859d44239f666ccb2cb38a18f5b6308b00100a.js integrity="sha256-81xgRZZPIULTyEvIU4WdRCOfZmzLLLOKGPW2MIsAEAo="></script>
 <script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk="></script>
 <link rel=apple-touch-icon sizes=128x128 href=128x128.jpg>
 <script>var _hmt=_hmt||[];(function(){var a=document.createElement("script"),b;a.src="https://hm.baidu.com/hm.js?65e05e8c0631a0d2802629f8ceb31fee",b=document.getElementsByTagName("script")[0],b.parentNode.insertBefore(a,b),console.log("欢迎加入，https://airdb.dev"),console.log("Welcome，https://airdb.dev")})()</script><nav class="app-nav pc no-badge">
@@ -192,6 +192,9 @@ golang 的垃圾回收我们经常听到三色标记法，三色指的是白色�
 </label>
 <ul>
 <li>
+<a href=https://kangkang17.cn/wiki/Docker/Dockerfile/>Dockerfile</a>
+</li>
+<li>
 <a href=https://kangkang17.cn/wiki/Docker/nginx-php-mysql%E4%B8%80%E4%BB%B6%E9%83%A8%E7%BD%B2/>Nginx Php Mysql一件部署</a>
 </li>
 <li>
@@ -205,6 +208,9 @@ golang 的垃圾回收我们经常听到三色标记法，三色指的是白色�
 <a>Nginx</a>
 </label>
 <ul>
+<li>
+<a href=https://kangkang17.cn/wiki/Nginx/rewrite%E4%B8%8Eproxy_pass/>Rewrite与proxy Pass</a>
+</li>
 <li>
 <a href=https://kangkang17.cn/wiki/Nginx/%E7%A6%81%E7%BD%91%E6%AE%B5/>禁网段</a>
 </li>
@@ -359,7 +365,7 @@ GC: 垃圾回收管理内存的方式</p>
 <strong>怎么把垃圾找出来？</strong>
 <a class=anchor href=#%e6%80%8e%e4%b9%88%e6%8a%8a%e5%9e%83%e5%9c%be%e6%89%be%e5%87%ba%e6%9d%a5>#</a>
 </h3>
-<pre><code>方法：从根处扫描，把所有的根扫描完，每个根扫描到底。按照之前的三色标记来说，扫描完了的是黑色，正在扫描的是灰色的，没扫描的是白色的。根扫描完了，那么最后只会剩下两种颜色的，黑色，白色。白色就是没用的垃圾，这种清理掉就没事。
+<pre tabindex=0><code>方法：从根处扫描，把所有的根扫描完，每个根扫描到底。按照之前的三色标记来说，扫描完了的是黑色，正在扫描的是灰色的，没扫描的是白色的。根扫描完了，那么最后只会剩下两种颜色的，黑色，白色。白色就是没用的垃圾，这种清理掉就没事。
 
 根：栈，是扫描的起点，还有一些全局变量也是根，是起点
 所谓的垃圾只对于堆上来说。栈上内存是编译器管理的，堆上内存是业务分配，垃圾回收器回收
