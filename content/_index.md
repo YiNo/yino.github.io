@@ -6,6 +6,44 @@ Hello，我是孙十七，这是我个人的一个博客及笔记，欢迎来看
 
 ## 项目经验：
 
+### 宝贝回家(公益项目,搜索视频号、公众号宝贝回家)
+```text
+  该项目是一个公益项目，由30W+志愿者无偿付出；此项目荣获过很多优秀的奖品，详情百度；
+  目标：为更多地走失人口，让他们能通过网络的力量，回到自己的家。
+  有幸是志愿者之一，与几个志愿者伙伴负责视频号公众号的客服开发；详情请体验；此项目有腾讯云的扶持，因此采用serverless 部署，方便快捷。
+```
+### AED小搜(公益项目,搜索小程序)
+```text
+  该项目是一个公益项目，由100+志愿者无偿付出；
+  目标是：能够获取到全国的救助站地点及全国的AED地点，为那些心跳骤停的”黄金4分钟“内的人员，更快的找到AED及时脱离危险。
+  有幸是志愿者之一，主要负责小程序界面的开发。
+```
+
+
+### 云安全访问服务(阿里云)
+```text
+    是阿里云为企业用户提供的一体化办公安全管控平台。基于阿里云分布全国海量的边缘节点与骨干网络，将安全能力下沉至边缘，为具备多分支或门店、远程和移动办公场景的企业提供即开即用的应用管控、URL防护、关键字过滤、内网零信任访问管控、上网行为审计、内网访问行为审计等能力。
+ 
+    阿里云控制台搜索csas
+```
+
+### NLP-QA [模型算法地址](https://github.com/yino/nlp-tf-idf)
+```text
+自己研发的一个nlp平台主要做一下关于nlp方面的api网站，可以提升自己，同时将所有api开源能提供给更多的开发者
+    1). 前端采用vue（vue-admin）做展示层
+    2). 后端采用Go(gin+gorm+DDD) 采用领域驱动 来设计程序[地址](https://github.com/yino/nlp-controller)
+    3). 模型算法采用Python,已完成模型
+        A. 机器学习：TF-IDF 余弦求文本相似度（短文本、已实现）(https://github.com/yino/nlp-tf-idf)
+        B. 深度学习（优化版本）：KB-QA采用神经网络对文本进行提取实体识别，关系提取 生成三元组（subject，relation，object）通过tf进行神经网络训练方法提取（研发中）
+    4). 数据库采用Mysql+Redis redis用于存储一些热数据比如token用户身份令牌，用户配置等，以及采用发布订阅 来通过两个编程语言之间的任务调度。
+    5). 自己研发的一个nlp平台主要做一下关于nlp方面的api网站，可以提升自己，同时将所有api开源
+    
+    demo地址：
+    [nlp.kangkang17.cn](http://nlp.kangkang17.cn)
+    account:yino
+    passwd: 123456
+```
+
 ### 壳牌润滑油（壳牌公司内部项目）
 ```text
     是一个直播电商项目给公司内部的代理商供货，曾单日6个小时创下业绩2亿
@@ -15,20 +53,7 @@ Hello，我是孙十七，这是我个人的一个博客及笔记，欢迎来看
     webserver: 5台nginx负载
 ```
 
-### NLP-QA [模型算法地址](https://github.com/sun17ya/nlp-tf-idf)
-```text
-自己研发的一个nlp平台主要做一下关于nlp方面的api网站，可以提升自己，同时将所有api开源能提供给更多的开发者
-    1). 前端采用vue（vue-admin）做展示层
-    2). 后端采用PHP（laravel+swoole），swoole用来给laravel进程提速。
-    3). 模型算法采用Python,已完成模型
-        A. 机器学习：TF-IDF 余弦求文本相似度（短文本、已实现）
-        B. 深度学习（优化版本）：KB-QA采用神经网络对文本进行提取实体识别，关系提取 生成三元组（subject，relation，object）通过tf进行神经网络训练方法提取（研发中）
-    4). 数据库采用Mysql+Redis redis用于存储一些热数据比如token用户身份令牌，用户配置等，以及采用发布订阅 来通过两个编程语言之间的任务调度。
-    5). 自己研发的一个nlp平台主要做一下关于nlp方面的api网站，可以提升自己，同时将所有api开源
-    
-```
-
-### [Go-laravel](https://github.com/sun17ya/golang-laravel)
+### [Go-laravel](https://github.com/yino/golang-laravel)
 ```text
 模仿Laravel框架开发 可以让PHP开发快速上手GO开发
 ```
@@ -47,7 +72,7 @@ PC： 是通过加载我们的Js sdk；
     案例：高新区企业直通车（公众号） 等。
 ```
 
-袋鼠圈体制宝（小程序）
+### 袋鼠圈体制宝（小程序）
 ```text
 项目负责人，负责数据库架构，项目架构，Api(RestFul),小程序，由于数据实时更新过快，所以迭代了3个版本，一期 5000个设备，每秒钟上报一次数据（gps,lbs,temperature,altitude....）
     服务端架构：
@@ -64,6 +89,7 @@ Python Socket+pyredis(采用于redis队列缓冲，多线程进行数据存储;�
             为什么会用到MongoDB，而是偶然的一次机会了解到 MongoDB的切片机制所以才选择使用此数据库作为，
             硬件数据的存储。
 ```
+
 易科芯（呼叫平台）
 ```text
     一款呼叫平台，主要针对电销行业平台，减轻电销成本等，
@@ -73,6 +99,7 @@ Python Socket+pyredis(采用于redis队列缓冲，多线程进行数据存储;�
     项目(合作开发)：CMS 开发 tp3.2+memcache+mysql
     号码采集(独立开发)：python+threading+request+bs4+socket+redis
 ```
+
 找公交（小程序）（官网：www.zhaogongjiao.com; ）
 ```text
     一款关于出行公交查询的小程序，站点的查询，公交的实时位置，
