@@ -31,6 +31,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/dev'
         with:
-          personal_token: ${{ secrets.GithubBotToken }}
+          github_token: ${{ secrets.GithubBotToken }}
           publish_branch: main
           publish_dir: ./public
