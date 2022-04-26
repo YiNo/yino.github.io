@@ -1,36 +1,35 @@
-name: Build with Hugo
+name: Node
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
-        hugo-version:
-          - 'latest'
+        node-version: [15.x]
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - name: Run Hugo
-        working-directory: ./
+          node-version: ${{ matrix.node-version }}
+      - name: npm install, build, and test
         run: |
-          hugo  --minify
-          echo 'kangkang17.cn' > public/CNAME
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/dev'
-        with:
-          personal_token: ${{ secrets.GithubBotToken }}
-          publish_branch: main
-          publish_dir: ./public
+          npm install -g vuepress
+          npm install
+          npm run build --if-present
+          cp -pr ./.vuepress/public/gh ./.vuepress/dist
+          cd ./.vuepress/dist
+          echo 'airdb.io' > CNAME
+          git init -b main
+          git config user.name "airdb-bot"
+          git config user.email "airdb-bot@airdb.com"
+          git add -A
+          git commit -m "Auto Update by actions"
+          git push --force "https://${{ secrets.GithubBotToken }}@github.com/${GITHUB_REPOSITORY}" main
+        env:
+          CI: true
