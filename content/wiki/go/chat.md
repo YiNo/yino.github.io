@@ -56,14 +56,11 @@ json编码非常消耗cpu
 消息推送瞬时消耗大量CPU资源
 消息推送瞬时带宽高达400～600M（4-6Gbits）,是主要瓶颈
 ```
-
-![image](/assets/img/websocket单体架构.jpg)
-
-
+![](/img/websocket_one.jpg)
 #### websocket分布式架构
 
 ##### 网关集群
-![image](/assets/img/websocket网关集群.jpg)
+![](/img/websocket_gateway.jpg)
 
 通过负载均衡将连接打散在不同的网关服务器上，网关服务器可横向扩展；
 
@@ -75,6 +72,6 @@ json编码非常消耗cpu
 
  基于HTTP/1 协议对外提供推送API；HTTP/1 更加普及，对业务更加友好；
 
-![image](/assets/img/websocket分布式整体架构.jpg)
+ ![](/img/websocket_distributed_complate.jpg)
 
 当然我们也可以将逻辑集群中的HTTP 更换为消息中间件，采用消息订阅的方式分发给gateway；

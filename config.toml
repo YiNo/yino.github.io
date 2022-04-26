@@ -27,37 +27,6 @@ enableGitInfo = true
   weight = 1
 
 [menu]
-[[menu.before]]
-  name = "主题首页"
-  url = "https://airdb.dev/hugo-book/"
-  weight = 10
-
-[[menu.before]]
-  name = "Hugo 配置"
-  url = "https://gohugo.io/getting-started/configuration"
-  weight = 21
-
-[[menu.before]]
-  name = "组件"
-  url = "https://github.com/airdb-wiki/hugo-book/actions"
-  weight = 22
-
-
-[[menu.before]]
-  name = "APIs"
-  url = "https://github.com/airdb-wiki/hugo-book/actions"
-  weight = 32
-
-[[menu.before]]
-  name = "Github Action"
-  url = "https://github.com/airdb-wiki/hugo-book/actions"
-  weight = 43
-
-[[menu.after ]]
-  name = "插件市场"
-  url = "https://themes.gohugo.io/hugo-book/"
-  weight = 10
-
 [[menu.after ]]
   name = "讨论区"
   url = "https://github.com/airdb-wiki/hugo-book/discussions"
