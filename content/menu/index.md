@@ -8,7 +8,7 @@ headless: false
   - [垃圾回收]({{< relref "/wiki/go/垃圾回收.md" >}})
   - [Go并发原理及GPM调度策略]({{< relref "/wiki/go/Go并发原理及GPM调度策略.md" >}})
   - [常用函数库]({{< relref "/wiki/go/常用函数库.md" >}})
-  - [百万聊天系统架构]({{< relref "/wiki/go/chat.md" >}})
+  - [百万聊天系统架构]({{< relref "/wiki/go/百万聊天系统架构.md" >}})
 
 - [Python]({{< relref "/wiki/Python/" >}})
   - [selenium]({{< relref "/wiki/Python/selenium.md" >}})
