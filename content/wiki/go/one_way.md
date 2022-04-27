@@ -2,14 +2,14 @@
 
 [github](https://github.com/yino/once-flight) [gitee](https://gitee.com/sun17ya/once-flight)
 
-####应用场景
+#### 应用场景
 在高并发场景下，n个用户同时查询同一个商品详情就会对应n个db查询，如果能将n个db查询合并成一个db查询，那么性能db的性能肯定会提升很多，此工具包就是为了解决此问题
 
 #### 优点
 1. 减少了db压力
 2. 解决了缓存击穿问题；若此时key刚好失效那么到db的请求始终只会有一个
 
-应用方式：
+#### 应用方式：
 ```go
 round := 10
 var wg sync.WaitGroup
@@ -49,7 +49,7 @@ wg.Wait()
 ```
 可直接运行代码库中的once_flight_test.go
 
-代码解读：
+#### 代码解读：
 ```go
 func (g *onceGroup) createCall(key string) (*call, bool) {
 	g.mutex.Lock()
