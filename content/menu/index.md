@@ -9,6 +9,7 @@ headless: false
   - [Go并发原理及GPM调度策略]({{< relref "/wiki/go/Go并发原理及GPM调度策略.md" >}})
   - [常用函数库]({{< relref "/wiki/go/常用函数库.md" >}})
   - [百万聊天系统架构]({{< relref "/wiki/go/百万聊天系统架构.md" >}})
+  - [通过go阻塞优化db查询]({{< relref "/wiki/go/one_way.md" >}})
 
 - [Python]({{< relref "/wiki/Python/" >}})
   - [selenium]({{< relref "/wiki/Python/selenium.md" >}})
@@ -18,7 +19,7 @@ headless: false
   - [threading]({{< relref "/wiki/Python/threading.md" >}})
   - [queue]({{< relref "/wiki/Python/queue.md" >}})
   - [tf-idf 文本分类]({{< relref "/wiki/Python/tf-idf.md" >}})
-  
+
 - [PHP]({{< relref "/wiki/PHP/" >}})
   - [fpm优化]({{< relref "/wiki/PHP/fpm优化.md" >}})
   - [excel导出]({{< relref "/wiki/PHP/function/excel-export.md" >}})
