@@ -1,27 +1,36 @@
-name: Hugo
+name: Build with Hugo
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        hugo-version:
+          - 'latest'
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.74.3'
+          hugo-version: 'latest'
           extended: true
 
-      - name: Build
+      - name: Run Hugo
+        working-directory: ./
         run: |
-          hugo -D --minify
+          hugo  --minify
+          echo 'kangkang17.cn' > public/CNAME
+
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2
-        env:
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/dev'
+        with:
           PERSONAL_TOKEN: ${{ secrets.GithubBotToken }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./public
