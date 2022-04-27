@@ -1,7 +1,7 @@
 # [Golang-Laravel](https://github.com/yino/golang-laravel)
 
 
-模仿PHP-Laravel，开箱即用、go语言版的laravel，phper转Go开发 可以立马上手~
+模仿PHP-Laravel，开箱即用、go语言版的laravel，phper转Go开发1 可以立马上手~
 
 #### package
 * [gin](https://github.com/gin-gonic/gin)
