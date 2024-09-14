@@ -1,6 +1,6 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL = 'https://kangkang17.cn'
+baseURL = 'https://yino.github.io'
 title = 'sun17 wiki'
 theme = 'book'
 
