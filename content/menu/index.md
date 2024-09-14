@@ -55,7 +55,8 @@ headless: false
 - **Linux**
   - [CentOS搭建Shadowsocks服务端]({{< relref "/wiki/Linux/CentOS搭建Shadowsocks服务端.md" >}})
   - [常用命令]({{< relref "/wiki/Linux/常用命令.md" >}})
-  
+  - [Prometheus]({{< relref "/wiki/Linux/Prometheus.md" >}})
+
 - **docker**
   - [常用命令]({{< relref "/wiki/Docker/常用命令.md" >}})
   
