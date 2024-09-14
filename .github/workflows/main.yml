@@ -58,7 +58,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           TZ: America/Los_Angeles
         run: |
-           hugo server --minify --theme book
+           hugo server --minify --theme book --verbose
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
