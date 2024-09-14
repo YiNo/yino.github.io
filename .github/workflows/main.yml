@@ -11,12 +11,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
         with:
-          node-version: 20
-      - name: Install PNPM
-        run: npm i -g pnpm
+          hugo-version: '0.123'
 
       - name: Build Docs
         env:
